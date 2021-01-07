@@ -18,4 +18,11 @@ class SecondViewController: UIViewController{
         print("3rd 뷰로 넘어갑니다")
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        if let preVC = self.presentingViewController as? ViewController{
+            print("이전화면 찾음")
+            preVC.label_data = "이전 화면에서 전달받은 데이터"
+            preVC.dismiss(animated: true, completion: nil)
+        }
+    }
 }
