@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1D3EDD25A6DCA300916594 /* LottoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D3EDC25A6DCA300916594 /* LottoCell.swift */; };
 		5CC414C325A61F3900506805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC414C225A61F3900506805 /* AppDelegate.swift */; };
 		5CC414C525A61F3900506805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC414C425A61F3900506805 /* SceneDelegate.swift */; };
 		5CC414C725A61F3900506805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC414C625A61F3900506805 /* ViewController.swift */; };
 		5CC414CA25A61F3900506805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC414C825A61F3900506805 /* Main.storyboard */; };
 		5CC414CC25A61F3C00506805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC414CB25A61F3C00506805 /* Assets.xcassets */; };
 		5CC414CF25A61F3D00506805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC414CD25A61F3D00506805 /* LaunchScreen.storyboard */; };
+		5EE5D567BBDAC9D928C6BDE6 /* Pods_LottoDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF821E96BA89647B53673BB6 /* Pods_LottoDraw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20DB3E5299B50823024F6DAE /* Pods-LottoDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoDraw.debug.xcconfig"; path = "Target Support Files/Pods-LottoDraw/Pods-LottoDraw.debug.xcconfig"; sourceTree = "<group>"; };
+		5C1D3EDC25A6DCA300916594 /* LottoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoCell.swift; sourceTree = "<group>"; };
 		5CC414BF25A61F3900506805 /* LottoDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC414C225A61F3900506805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CC414C425A61F3900506805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		5CC414CB25A61F3C00506805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CC414CE25A61F3D00506805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CC414D025A61F3D00506805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF821E96BA89647B53673BB6 /* Pods_LottoDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7ED9F279E12D6E8FCA85539 /* Pods-LottoDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoDraw.release.xcconfig"; path = "Target Support Files/Pods-LottoDraw/Pods-LottoDraw.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE5D567BBDAC9D928C6BDE6 /* Pods_LottoDraw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F62004F8BACE5C48EE7DFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF821E96BA89647B53673BB6 /* Pods_LottoDraw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CC414B625A61F3900506805 = {
 			isa = PBXGroup;
 			children = (
 				5CC414C125A61F3900506805 /* LottoDraw */,
 				5CC414C025A61F3900506805 /* Products */,
+				982A9AEA89E2C7F700A9FC83 /* Pods */,
+				2F62004F8BACE5C48EE7DFC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +76,23 @@
 				5CC414C225A61F3900506805 /* AppDelegate.swift */,
 				5CC414C425A61F3900506805 /* SceneDelegate.swift */,
 				5CC414C625A61F3900506805 /* ViewController.swift */,
+				5C1D3EDC25A6DCA300916594 /* LottoCell.swift */,
 				5CC414C825A61F3900506805 /* Main.storyboard */,
 				5CC414CB25A61F3C00506805 /* Assets.xcassets */,
 				5CC414CD25A61F3D00506805 /* LaunchScreen.storyboard */,
 				5CC414D025A61F3D00506805 /* Info.plist */,
 			);
 			path = LottoDraw;
+			sourceTree = "<group>";
+		};
+		982A9AEA89E2C7F700A9FC83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20DB3E5299B50823024F6DAE /* Pods-LottoDraw.debug.xcconfig */,
+				D7ED9F279E12D6E8FCA85539 /* Pods-LottoDraw.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CC414D325A61F3D00506805 /* Build configuration list for PBXNativeTarget "LottoDraw" */;
 			buildPhases = (
+				E3B3DBFD9DFAE73E3EDCEA0D /* [CP] Check Pods Manifest.lock */,
 				5CC414BB25A61F3900506805 /* Sources */,
 				5CC414BC25A61F3900506805 /* Frameworks */,
 				5CC414BD25A61F3900506805 /* Resources */,
+				027842CF8EFA6F13470A1E30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,11 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		027842CF8EFA6F13470A1E30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B3DBFD9DFAE73E3EDCEA0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottoDraw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5CC414BB25A61F3900506805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1D3EDD25A6DCA300916594 /* LottoCell.swift in Sources */,
 				5CC414C725A61F3900506805 /* ViewController.swift in Sources */,
 				5CC414C325A61F3900506805 /* AppDelegate.swift in Sources */,
 				5CC414C525A61F3900506805 /* SceneDelegate.swift in Sources */,
@@ -283,6 +356,7 @@
 		};
 		5CC414D425A61F3D00506805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DB3E5299B50823024F6DAE /* Pods-LottoDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +376,7 @@
 		};
 		5CC414D525A61F3D00506805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7ED9F279E12D6E8FCA85539 /* Pods-LottoDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
