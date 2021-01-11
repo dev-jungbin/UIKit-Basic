@@ -94,7 +94,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     @IBAction func doLoad(_ sender: Any) {
-        print("load")
+        lottoNumbers = Array<Array<Int>>()
+        let db = FMDatabase(path: databasePath)
+        if db.open(){
+            let query = "select * from lotto"
+            if let result = db.executeQuery(query, withArgumentsIn: []) {
+                while result.next(){
+                    var columnArray = Array<Int>()
+                    columnArray.append(Int(result.int(forColumn: "number1")))
+                    columnArray.append(Int(result.int(forColumn: "number2")))
+                    columnArray.append(Int(result.int(forColumn: "number3")))
+                    columnArray.append(Int(result.int(forColumn: "number4")))
+                    columnArray.append(Int(result.int(forColumn: "number5")))
+                    columnArray.append(Int(result.int(forColumn: "number6")))
+                    lottoNumbers.append(columnArray)
+                }
+                tableView.reloadData()
+            }
+        } else {
+            NSLog("DB 연결 오류")
+        }
     }
 }
 
