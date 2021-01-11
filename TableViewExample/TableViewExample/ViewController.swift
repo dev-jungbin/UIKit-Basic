@@ -73,10 +73,38 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         //뷰 인스턴스가 메모리에 올라왔고, 아직 화면은 뜨지 않은 상황
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //편집 버튼 눌렀을 때 코드!
-        self.tableView.isEditing = true
+        // 새로고침!!!
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .cyan
+        refreshControl.addTarget(self, action: #selector(fetchData(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    @objc func fetchData(_ sender:Any) {
+        tableView.refreshControl?.endRefreshing()
     }
 
 
+    @IBAction func changeEditing(_ sender: UIBarButtonItem) {
+        // self.tableView.isEditing = !self.tableView.isEditing
+        // toggle swift 4.2 때 추가댐
+        self.tableView.isEditing.toggle()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
+        // 선택하면 선택 바로 풀리게
+        tableView.deselectRow(at: indexPath, animated: false)
+        performSegue(withIdentifier: "goDetail", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
