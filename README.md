@@ -8,5 +8,9 @@
     > 네비게이션 바로 이동할 때에는 present 설정을 Show로 바꾸기
   - [TabbarBasic](https://github.com/lollin0/2021-SWU-GURU2/tree/main/TabbarBasic):
     > TabBar 추가해서 View 연결할 때에는 View Controllers 선택하기
-* day 4
+* day 4, 5
   - [TableViewExample](https://github.com/lollin0/2021-SWU-GURU2/tree/main/TableViewExample): TableView 다루기, Edit 탭바, 삭제/이동/오른쪽 왼쪽 버튼
+* day 6
+  - [ScrollViewExample]()
+  - [CollectionViewExample]()
+  - [NaverWebtoonExample]()
