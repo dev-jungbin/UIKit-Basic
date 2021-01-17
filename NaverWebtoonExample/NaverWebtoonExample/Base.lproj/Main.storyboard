@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pmc-YG-0sn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NaverWebtoonExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webtoonListView" id="BYZ-38-t0r" customClass="ViewController" customModule="NaverWebtoonExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="73.660714285714278"/>
+            <point key="canvasLocation" x="2222" y="320"/>
+        </scene>
+        <!--Web Toon Main View Controller-->
+        <scene sceneID="kI7-YI-JFw">
+            <objects>
+                <viewController id="Pmc-YG-0sn" customClass="WebToonMainViewController" customModule="NaverWebtoonExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2t-gs-IKE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-0h-AQ4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YFZ-0h-AQ4" secondAttribute="height" multiplier="218:120" id="DU0-8s-AYD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ybd-rI-kml"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0oO-zA-tXq"/>
+                            </scrollView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWY-Jn-HWN">
+                                <rect key="frame" x="0.0" y="272" width="414" height="590"/>
+                                <connections>
+                                    <segue destination="qgd-t7-BXV" kind="embed" id="Wuz-Jc-10q"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qHT-Q9-ZAH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CWY-Jn-HWN" firstAttribute="top" secondItem="YFZ-0h-AQ4" secondAttribute="bottom" id="Dzc-a9-8hA"/>
+                            <constraint firstItem="YFZ-0h-AQ4" firstAttribute="trailing" secondItem="qHT-Q9-ZAH" secondAttribute="trailing" id="HQ2-Ma-nT9"/>
+                            <constraint firstItem="CWY-Jn-HWN" firstAttribute="bottom" secondItem="qHT-Q9-ZAH" secondAttribute="bottom" id="Hcw-4f-i85"/>
+                            <constraint firstItem="YFZ-0h-AQ4" firstAttribute="top" secondItem="qHT-Q9-ZAH" secondAttribute="top" id="W5K-c8-dMM"/>
+                            <constraint firstItem="CWY-Jn-HWN" firstAttribute="leading" secondItem="qHT-Q9-ZAH" secondAttribute="leading" id="k8M-AE-aJt"/>
+                            <constraint firstItem="YFZ-0h-AQ4" firstAttribute="leading" secondItem="qHT-Q9-ZAH" secondAttribute="leading" id="szb-1b-Mee"/>
+                            <constraint firstItem="CWY-Jn-HWN" firstAttribute="trailing" secondItem="qHT-Q9-ZAH" secondAttribute="trailing" id="ulb-PP-wLe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerScrollView" destination="YFZ-0h-AQ4" id="hQs-qO-FxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nic-8j-dif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="73.660714285714278"/>
+        </scene>
+        <!--Daily Webtoon List View Controller-->
+        <scene sceneID="cyt-Yp-IQG">
+            <objects>
+                <viewController id="qgd-t7-BXV" customClass="DailyWebtoonListViewController" customModule="NaverWebtoonExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AbW-WE-qyj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="590"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="R2q-KM-KUm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2h-vL-Gcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="217"/>
         </scene>
     </scenes>
     <resources>

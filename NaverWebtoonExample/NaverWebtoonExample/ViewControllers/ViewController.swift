@@ -28,13 +28,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleImages.count
+        return titleImages.count * 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "webToonCell", for: indexPath) as! WebToonCell
         // title, 별점, 작가명 채우기
-        let data = webtoonData[indexPath.row]
+        let data = webtoonData[indexPath.row%6]
         cell.titleLabel.text = data.title
         cell.ratingLabel.text = "\(data.rating!)"
         cell.authorLabel.text = data.author
@@ -50,7 +50,8 @@ extension ViewController: UICollectionViewDataSource{
 
 extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.view.frame.size.width / 3
+        //let width = self.view.frame.size.width / 3
+        let width = UIScreen.main.bounds.width / 3
         let height = width * 1.5
         return CGSize(width: width, height: height)
         
