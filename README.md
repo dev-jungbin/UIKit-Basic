@@ -16,5 +16,6 @@
   - [NaverWebtoonExample]()
     > banner, CollectionView + CocoaPods(parchment 라이브러리 사용하기)
 
-* day 7
-
+* day 7, 8
+ - [AlamofireBasic]()
+ > json 데이터 받아와서 파싱 + CollectionView + DetailView + indicator
