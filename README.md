@@ -19,3 +19,7 @@
 * day 7, 8
  - [AlamofireBasic]()
  > json 데이터 받아와서 파싱 + CollectionView + DetailView + indicator
+
+* day 9
+ - [UIControlExample]()
+  > intro GIF, utils **** hex, hexa 코드 변환!!!!
