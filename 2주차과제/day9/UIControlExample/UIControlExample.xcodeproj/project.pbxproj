@@ -18,7 +18,6 @@
 		5CB537D125B568AD00F5B2A3 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB537D025B568AD00F5B2A3 /* SwiftyGif */; };
 		5CB537D825B56D7800F5B2A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB537D725B56D7800F5B2A3 /* MainViewController.swift */; };
 		5CB537DC25B572D200F5B2A3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB537DB25B572D200F5B2A3 /* extensions.swift */; };
-		5CB537E325B5754F00F5B2A3 /* WebtoonView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB537E225B5754F00F5B2A3 /* WebtoonView.storyboard */; };
 		5CB537E625B5763000F5B2A3 /* WebtoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB537E525B5763000F5B2A3 /* WebtoonViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		5CB537CB25B566F100F5B2A3 /* intro.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = intro.gif; sourceTree = SOURCE_ROOT; };
 		5CB537D725B56D7800F5B2A3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5CB537DB25B572D200F5B2A3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		5CB537E225B5754F00F5B2A3 /* WebtoonView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebtoonView.storyboard; sourceTree = "<group>"; };
 		5CB537E525B5763000F5B2A3 /* WebtoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewController.swift; sourceTree = "<group>"; };
 		DCC8AB0E0E1C190F5469C157 /* Pods_UIControlExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIControlExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E0A2FC63EF2333CAB9B634 /* Pods-UIControlExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIControlExample.debug.xcconfig"; path = "Target Support Files/Pods-UIControlExample/Pods-UIControlExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			children = (
 				5CB537BA25B5661800F5B2A3 /* Main.storyboard */,
 				5CB537BF25B5661A00F5B2A3 /* LaunchScreen.storyboard */,
-				5CB537E225B5754F00F5B2A3 /* WebtoonView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CB537E325B5754F00F5B2A3 /* WebtoonView.storyboard in Resources */,
 				5CB537C125B5661A00F5B2A3 /* LaunchScreen.storyboard in Resources */,
 				5CB537BE25B5661A00F5B2A3 /* Assets.xcassets in Resources */,
 				5CB537CC25B566F200F5B2A3 /* intro.gif in Resources */,

@@ -16,8 +16,7 @@ class MainViewController: UIViewController {
     var viewControllers = [UIViewController]()
     static let firstTabViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "firstTapViewController")
     static let secondTabViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "secondTapViewController")
-    static let thirdTabViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "thirdTapViewController")
-    static let testViewController = UIStoryboard(name: "WebtoonView", bundle: nil).instantiateViewController(withIdentifier: "testViewController")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,13 +26,11 @@ class MainViewController: UIViewController {
             btn.isUserInteractionEnabled = true
             btn.addGestureRecognizer(tap)
         }
-        tabBtns[0].backgroundColor = UIColor.init(hexRGB: "#00c579")
         
         viewControllers.append(MainViewController.firstTabViewController)
         viewControllers.append(MainViewController.secondTabViewController)
-        viewControllers.append(MainViewController.testViewController)
         
-        tapTapped(tabBtns[0].gestureRecognizers![0] as! UITapGestureRecognizer)
+        //tapTapped(tabBtns[0].gestureRecognizers![0] as! UITapGestureRecognizer)
     }
     
     @objc func tapTapped(_ sender: UITapGestureRecognizer) {

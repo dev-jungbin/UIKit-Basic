@@ -1,0 +1,6 @@
+framework module Pods_UIControlExample {
+  umbrella header "Pods-UIControlExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
