@@ -38,7 +38,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label" destination="gmi-q1-kzO" id="260-Ef-yQR"/>
+                                            <outlet property="label" destination="gmi-q1-kzO" id="aQj-7I-sfn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

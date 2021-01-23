@@ -9,7 +9,6 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
     var person_data = [DummyData]()
     
