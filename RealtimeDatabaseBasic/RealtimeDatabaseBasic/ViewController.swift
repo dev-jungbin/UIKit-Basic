@@ -30,17 +30,38 @@ class ViewController: UIViewController {
         ref = Database.database().reference()
         print("1")
         // 새로 데이터를 넣을 때 setValue
-        ref.child("users/1122334455/username").setValue(["test":"bbbb", "id":"flashmaestro", "date":11121312]){
-            (error:Error?, ref:DatabaseReference) in
-            if let error = error {
-              print("Data could not be saved: \(error).")
-            } else {
-                let alertVC = UIAlertController(title: "Complete", message: "Data saved!!", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertVC, animated: true, completion: nil)
-              print("Data saved successfully!")
-            }
-          }
+//        guard let key = ref.child("users").childByAutoId().key else { return }
+//        let post = ["username": "carrot",
+//                    "title": "titless"]
+//        let childUpdates = ["/posts/\(key)": post,
+//                            "/user/carrot/posts/\(key)/": post]
+//        ref.updateChildValues(childUpdates)
+//
+        // My top posts by number of stars
+        let testQuery = (ref.child("users")).queryOrdered(byChild: "username")
+        testQuery.observe(.value) { (snapshot) in
+            let testDict = snapshot.value as? [String : AnyObject] ?? [:]
+            print(testDict)
+        }
+
+        /*
+            CRUD
+            c: Create
+            r: Read
+            u: Update
+            d: Delete
+         */
+//        ref.child("users/\(key)").setValue(["msg":"hi", "username":"heeee", "date":Int(Date().timeIntervalSince1970)]){
+//            (error:Error?, ref:DatabaseReference) in
+//            if let error = error {
+//              print("Data could not be saved: \(error).")
+//            } else {
+//                let alertVC = UIAlertController(title: "Complete", message: "Data saved!!", preferredStyle: .alert)
+//                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//                self.present(alertVC, animated: true, completion: nil)
+//              print("Data saved successfully!")
+//            }
+//          }
         // 있는 데이터를 수정할 때 updateChildValues
         ref.child("users/1122334455/username").updateChildValues(["test":"aaaa"])
         print("2")
