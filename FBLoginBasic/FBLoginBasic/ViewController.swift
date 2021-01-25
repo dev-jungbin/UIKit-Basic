@@ -34,7 +34,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let loginButton = FBLoginButton()
+            let loginButton = FBLoginButton()
         loginButton.delegate = self
         let width = loginButton.frame.width
         let height = loginButton.frame.height
