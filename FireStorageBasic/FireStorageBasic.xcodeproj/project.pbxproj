@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		5C93B34825C022B20067A723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B34725C022B20067A723 /* Assets.xcassets */; };
 		5C93B34B25C022B20067A723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B34925C022B20067A723 /* LaunchScreen.storyboard */; };
 		5C93B35425C023040067A723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B35325C023040067A723 /* GoogleService-Info.plist */; };
+		5C93B38725C10E9B0067A723 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B38625C10E9B0067A723 /* ImageListViewController.swift */; };
+		5C93B39825C182730067A723 /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B39725C182730067A723 /* imageCell.swift */; };
 		A3D6C68CC05D73EF907A50BD /* Pods_FireStorageBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E331B93C53FF8FBC45CB387D /* Pods_FireStorageBasic.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		5C93B34A25C022B20067A723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C93B34C25C022B20067A723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C93B35325C023040067A723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C93B38625C10E9B0067A723 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		5C93B39725C182730067A723 /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
 		E331B93C53FF8FBC45CB387D /* Pods_FireStorageBasic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireStorageBasic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9FCB51B6EF558907F06048 /* Pods-FireStorageBasic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStorageBasic.debug.xcconfig"; path = "Target Support Files/Pods-FireStorageBasic/Pods-FireStorageBasic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,11 +72,13 @@
 				5C93B33E25C022AE0067A723 /* AppDelegate.swift */,
 				5C93B34025C022AE0067A723 /* SceneDelegate.swift */,
 				5C93B34225C022AE0067A723 /* ViewController.swift */,
+				5C93B38625C10E9B0067A723 /* ImageListViewController.swift */,
 				5C93B34425C022AE0067A723 /* Main.storyboard */,
 				5C93B34725C022B20067A723 /* Assets.xcassets */,
 				5C93B34925C022B20067A723 /* LaunchScreen.storyboard */,
 				5C93B34C25C022B20067A723 /* Info.plist */,
 				5C93B35325C023040067A723 /* GoogleService-Info.plist */,
+				5C93B39725C182730067A723 /* imageCell.swift */,
 			);
 			path = FireStorageBasic;
 			sourceTree = "<group>";
@@ -83,7 +89,6 @@
 				FF9FCB51B6EF558907F06048 /* Pods-FireStorageBasic.debug.xcconfig */,
 				32E599C5F7756BCF0B98DE16 /* Pods-FireStorageBasic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +217,8 @@
 			files = (
 				5C93B34325C022AE0067A723 /* ViewController.swift in Sources */,
 				5C93B33F25C022AE0067A723 /* AppDelegate.swift in Sources */,
+				5C93B39825C182730067A723 /* imageCell.swift in Sources */,
+				5C93B38725C10E9B0067A723 /* ImageListViewController.swift in Sources */,
 				5C93B34125C022AE0067A723 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,18 +7,22 @@
 
 import UIKit
 import FirebaseStorage
-import PhotosUI
+import FirebaseDatabase
+import Photos
 
 class ViewController: UIViewController{
     let storage = Storage.storage()
     var storageRef:StorageReference!
     var imagePicker:UIImagePickerController!
     var file_name:String!
+    var ref: DatabaseReference!
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         storageRef = storage.reference()
+        
+        ref = Database.database().reference()
     }
     
     @IBAction func selectImage(_ sender: Any) {
@@ -83,6 +87,8 @@ class ViewController: UIViewController{
                     guard let downloadURL = url else {
                         return
                     }
+                    guard let key = self.ref.child("users/11abcd3422/images").childByAutoId().key else { return }
+                    self.ref.child("users/11abcd3422/images/\(key)").setValue(["image_url": downloadURL.absoluteString])
                     print(downloadURL, "upload complete")
                 }
             }
