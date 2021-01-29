@@ -8,4 +8,6 @@ target 'FireStorageBasic' do
   # Pods for FireStorageBasic
 pod 'Firebase/Storage'
 pod 'Firebase/Database'
+pod 'AlamofireImage', '~> 4.1'
+
 end
