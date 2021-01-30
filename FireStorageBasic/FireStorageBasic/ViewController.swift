@@ -9,6 +9,7 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 import Photos
+import AVKit
 
 class ViewController: UIViewController{
     let storage = Storage.storage()
@@ -92,6 +93,22 @@ class ViewController: UIViewController{
                     print(downloadURL, "upload complete")
                 }
             }
+        }
+    }
+    @IBAction func btnCmera(_ sender: Any) {
+        switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
+        case .authorized:
+            imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+        case .notDetermined:
+            print("결정 안 됨")
+            AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                print(granted)
+            }
+        default:
+            print("실패")
         }
     }
 }

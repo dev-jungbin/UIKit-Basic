@@ -23,25 +23,32 @@
                                     <constraint firstAttribute="width" secondItem="vPR-t8-RVK" secondAttribute="height" multiplier="1:1" id="3cO-OZ-ez6"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="81B-Vq-0LL">
-                                <rect key="frame" x="20" y="510" width="375" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-un-wbU">
+                                <rect key="frame" x="20" y="510" width="374" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAz-BC-WEa">
-                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
-                                        <state key="normal" title="Select Image"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAz-BC-WEa">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="Gallery"/>
                                         <connections>
                                             <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6R-mx-VOH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-Pi-meP">
-                                        <rect key="frame" x="172" y="0.0" width="49" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF3-4w-9AT">
+                                        <rect key="frame" x="120" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Camera"/>
+                                        <connections>
+                                            <action selector="btnCmera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tu2-iB-Pd6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-Pi-meP">
+                                        <rect key="frame" x="214" y="0.0" width="49" height="30"/>
                                         <state key="normal" title="Upload"/>
                                         <connections>
                                             <action selector="uploadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fD1-co-5wL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-k3-kCz">
-                                        <rect key="frame" x="304" y="0.0" width="71" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-k3-kCz">
+                                        <rect key="frame" x="303" y="0.0" width="71" height="30"/>
                                         <state key="normal" title="Image List"/>
                                         <connections>
                                             <segue destination="a82-UX-9J0" kind="show" id="DCo-em-DIh"/>
@@ -53,11 +60,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="81B-Vq-0LL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dxs-XH-1q9"/>
-                            <constraint firstItem="81B-Vq-0LL" firstAttribute="top" secondItem="vPR-t8-RVK" secondAttribute="bottom" constant="8" symbolic="YES" id="JLq-zo-bOx"/>
                             <constraint firstItem="vPR-t8-RVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jz5-j7-3ln"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="81B-Vq-0LL" secondAttribute="trailing" constant="19" id="O3l-lC-fVs"/>
                             <constraint firstItem="vPR-t8-RVK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RRD-ut-FOf"/>
+                            <constraint firstItem="ebb-un-wbU" firstAttribute="top" secondItem="vPR-t8-RVK" secondAttribute="bottom" constant="8" symbolic="YES" id="XHd-aS-Ej3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebb-un-wbU" secondAttribute="trailing" constant="20" id="cPl-vW-AX2"/>
+                            <constraint firstItem="ebb-un-wbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="imV-9S-UmZ"/>
                             <constraint firstItem="vPR-t8-RVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rcM-JC-RvW"/>
                         </constraints>
                     </view>
